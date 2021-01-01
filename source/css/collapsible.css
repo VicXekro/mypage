@@ -1,0 +1,27 @@
+.collapse {
+  /*background-color: rgb(83, 186, 255);*/
+  color:#1EAEDB;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  text-transform: unset;
+  width: 100%;
+  border: none;
+  border-radius:none;
+  text-align: left;
+  outline: none;
+  font-size: 1.5rem;
+  height: 0px;
+  line-height: 0px;
+}
+.active, .collapse:hover {
+  /*background-color: rgb(34, 85, 160);*/
+  color: #0FA0CE;
+}
+.content {
+  /*padding: 0 18px;*/
+  display: none;
+  overflow: hidden;
+  background-color: #e6e6e6;
+  /*font-size: 18px;*/
+}
