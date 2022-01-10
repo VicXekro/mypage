@@ -1,69 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
     <head>
+         <!--Declaring character sets-->
+         <meta charset="UTF-8">
+
         <title>Victor Youdom Kemmoe</title>
 
-        <!--Declaring character sets-->
-        <meta charset="UTF-8">
-        <!-- Mobile Specific Metas-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- FONT -->
-        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-        <!-- CSS -->
-        <link rel="stylesheet" href="source/css/normalize.css">
-        <link rel="stylesheet" href="source/css/skeleton.css">
-        <link rel="stylesheet" href="source/css/collapsible.css">
-
-        <style>
-            #pub{
-                text-decoration: none; 
-                font-weight: bold; 
-                color: black;
-            }
-            #simple_link{
-                text-decoration: none;
-            }
-        </style>
+         <!-- Mobile Specific Metas-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="source/bulma-0.9.3/bulma/css/bulma.min.css">
     </head>
 
-    <body background="source/image/y-so-serious-white.png">
+    <body>
+        <script src="source/bulma-0.9.3/custom.js"></script>
 
-         <!-- Primary Page Layout-->
-        <div class="container" style="margin-top: 40pt; background-color:rgba(240, 240, 240, 0.76); ">
-            
-            <!--Menu-->
-            <div class="row" style="float: right;">
-                <a href="index.html"><button class="button-primary">Home</button></a>
-                <!--<a href="pub.html"><button class="button-primary">Publications</button></a>-->
-                <a href="project.html"><button class="button-primary">Project</button></a>
-            </div>
-            
-            <!--Rest of the body-->
-            <div class="row">
-                <div class="three columns" style="margin-top: 50pt;">
-                    <img src="source/image/Victor.jpg" alt="headshot" style="max-width: 100%; height: auto;">
-                    <p> <a style="color: black; font-size: 13pt; font-weight: bold;">Victor Youdom Kemmoe</a><br>
-                        <a href="mailto:v.k.youdom@gmailcom">E-mail</a> -
-                        <a href="https://github.com/VicXekro" target="_blank" rel="noopener noreferrer">Github</a> - 
-                        <a href="https://www.linkedin.com/in/victoryk/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    </p>
-                </div>
+        <!-- Navigation Menu -->
+        <nav class="navbar is-fixed-top is-transparent is-dark" role="navigation" aria-label="main navigation">
 
-                <div class="nine columns">
-                    
-                        Rest the page currently under construction
-                </div>
-            </div>
-    
+            <div class="navbar-brand">
+                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+             </div>
+
+            <div class="navbar-menu navbar-end" id="navMenu">
+                <a class="navbar-item" >
+                    Home
+                </a>
+
+                <a class="navbar-item">
+                    Publications
+                </a>
+
+                <a class="navbar-item">
+                    Projects
+                </a>
+
+                <a class="navbar-item">
+                    Blog
+                </a>
                 
-        </div>
+              </div>
+            </div>
+        </nav>
 
-        <!--Footer-->
-        <div class="container" style=" background-color:rgba(223, 223, 223, 0.76);" >
-            <footer>
-                <p style="text-align: center;">Powered by <a href="http://getskeleton.com/">Skeleton</a></p>
-              </footer> 
+        <!-- Main body -->
+        <div style="margin-left: 15%; margin-right: 15%; margin-top: 20px;">
+
+            <div class="columns">
+
+                <div class="column is-one-third">
+                    <div class="content has-text-centered">
+                        <figure class="image" style="height: 256px; width: 256px;">
+                            <img class="is-rounded" src="source/image/Victor.jpg">
+                        </figure>
+
+                        <h4 class="title is-4">Victor Youdom Kemmoe</h4>
+                        
+                        <button class="button">Email</button>
+                        <button class="button">Github</button>
+                        <button class="button">Twitter</button>
+                    </div>
+                </div>
+
+                <div class="column">
+                  Second column
+                </div>
+               
+            </div>
+
+            
         </div>
         
+        <footer class="footer" style="padding: 3rem 1.5rem 3rem;">
+            <div class="content has-text-centered">
+              <p>
+                Powered by <a href="https://bulma.io/">Bulma</a>.
+              </p>
+            </div>
+          </footer>
     </body>
 </html>
