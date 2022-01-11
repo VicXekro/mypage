@@ -362,7 +362,7 @@ body {
 }
 
 a {
-  color: #485fc7;
+  color: #2F789C; /*Previous color: #485fc7*/
   cursor: pointer;
   text-decoration: none;
 }
@@ -2327,6 +2327,12 @@ div.icon-text {
 .image.is-128x128 {
   height: 128px;
   width: 128px;
+}
+
+/*added by me*/
+.image.is-256x256 {
+  height: 256px;
+  width: 256px;
 }
 
 .notification {

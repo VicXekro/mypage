@@ -8,10 +8,12 @@
 
          <!-- Mobile Specific Metas-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="source/bulma-0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="source/bulma-0.9.3/css/bulma.css">
+        <link rel="stylesheet" href="source/font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body>
+    <!-- Remove the fix height after there is enough contents-->
+    <body background="source/image/retina_wood.png" style="height: 1500px;">
         <script src="source/bulma-0.9.3/custom.js"></script>
 
         <!-- Navigation Menu -->
@@ -26,7 +28,7 @@
              </div>
 
             <div class="navbar-menu navbar-end" id="navMenu">
-                <a class="navbar-item" >
+                <a class="navbar-item is-active" >
                     Home
                 </a>
 
@@ -47,26 +49,44 @@
         </nav>
 
         <!-- Main body -->
-        <div style="margin-left: 15%; margin-right: 15%; margin-top: 20px;">
+        <div style="margin-left: 15%; margin-right: 15%; padding-top: 20px; padding-bottom: 20px;">
 
-            <div class="columns">
+            <div class="columns ">
 
-                <div class="column is-one-third">
+                <!-- Name of the background color is: bisque-->
+                <div class="column is-one-third" style="background-color: rgba(255, 228, 196, 0.60);">
                     <div class="content has-text-centered">
-                        <figure class="image" style="height: 256px; width: 256px;">
-                            <img class="is-rounded" src="source/image/Victor.jpg">
-                        </figure>
+                        <div style="display: flex; justify-content: center;">
+                            <figure class="image" >
+                                <img class="is-rounded" style="height: auto; width: 256px;" src="source/image/Victor.jpg">
+                            </figure>
+                        </div>
 
                         <h4 class="title is-4">Victor Youdom Kemmoe</h4>
                         
-                        <button class="button">Email</button>
-                        <button class="button">Github</button>
-                        <button class="button">Twitter</button>
+                        <a class="button is-white" href="mailto:victor.y.k@brown.edu"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        <a class="button is-white" href="https://github.com/VicXekro"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        <a class="button is-white" href="https://twitter.com/VicXekro"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
-                <div class="column">
-                  Second column
+                <!-- Name of the background color is: florawhite-->
+                <div class="column" style="background-color: rgba(255, 250, 240, 0.60);">
+                    <section class="section">
+                        <h1 class="title">About</h1>
+                        
+                        <p>I am a Ph.D. student in Computer Science at Brown University. I am advised by 
+                            <a href="http://cs.brown.edu/~seny/" >Prof. Seny Kamara</a> and 
+                            <a href="https://cs.brown.edu/~mph/">Prof. Maurice Herlihy</a>, and my areas of research are 
+                            Cryptography and Distributed Computing.</p>
+
+                        <p>I obtained my M.S. in Computer Science from Kennesaw State University, GA, where I worked with 
+                            <a href="https://sites.google.com/site/junggabson/">Prof. Junggab Son</a> and a B.S. in Computer Science.</p>
+                      </section>
+
+                      <section class="section">
+                        <h1 class="title">News</h1>
+                      </section>
                 </div>
                
             </div>
@@ -74,7 +94,7 @@
             
         </div>
         
-        <footer class="footer" style="padding: 3rem 1.5rem 3rem;">
+        <footer class="footer" style="padding: 3rem 1.5rem 3rem; background-color: transparent;">
             <div class="content has-text-centered">
               <p>
                 Powered by <a href="https://bulma.io/">Bulma</a>.
