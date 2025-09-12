@@ -15,7 +15,8 @@
     <!-- https://fontawesome.com/v4.7/icons/ for documentation on fav icon-->
     <!-- https://www.toptal.com/designers/subtlepatterns/tag/wood/ for patterns-->
     <!-- Remove the fix height after there is enough contents-->
-    <body background="source/image/retina_wood.png" style="height: 1500px;">
+    <!-- height: 5000px; -->
+    <body background="source/image/retina_wood.png" style="min-height: 100vh;">
         <script src="source/bulma-0.9.3/custom.js"></script>
 
         <!-- Navigation Menu -->
@@ -34,17 +35,17 @@
                     Home
                 </a>
 
-                <a class="navbar-item">
+                <a class="navbar-item" href="#publications">
                     Publications
                 </a>
 
-                <a class="navbar-item">
-                    Projects
+                <a class="navbar-item" href="#talks">
+                    Talks
                 </a>
 
-                <a class="navbar-item">
+                <!--<a class="navbar-item">
                     Blog
-                </a>
+                </a>-->
                 
               </div>
             </div>
@@ -60,7 +61,7 @@
                     <div class="content has-text-centered">
                         <div style="display: flex; justify-content: center;">
                             <figure class="image" >
-                                <img class="is-rounded" style="height: auto; width: 256px;" src="source/image/Victor.jpg">
+                                <img class="is-rounded" style="height: auto; width: 256px;" src="source/image/Victor045.jpg">
                             </figure>
                         </div>
 
@@ -77,18 +78,82 @@
                 <div class="column" style="background-color: rgba(255, 250, 240, 0.60);">
                     <section class="section">
                         <h1 class="title">About</h1>
-                        
-                        <p>I am a Ph.D. student in Computer Science at Brown University where I am advised by <a href="https://cs.brown.edu/people/alysyans/">Prof. Anna Lysyanskaya</a>, and my main area of research is Cryptography. Previously, I was advised by 
+                        <div class="content">
+                        <p>I am a Ph.D. student in Computer Science at Brown University where I am advised by <a href="https://cs.brown.edu/people/alysyans/">Prof. Anna Lysyanskaya</a>. My main research area is Cryptography. Recently, I have been focusing on lattice-based cryptography and the management of digital credentials.
+                            
+                            <!--Previously, I was advised by 
                             <a href="http://cs.brown.edu/~seny/" >Prof. Seny Kamara</a> and 
-                            <a href="https://cs.brown.edu/~mph/">Prof. Maurice Herlihy</a>.</p>
+                            <a href="https://cs.brown.edu/~mph/">Prof. Maurice Herlihy</a>.</p> -->
 
-                        <p>I obtained a M.S. and B.S. in Computer Science from Kennesaw State University. During my master's, I was advised by
+                        <p>Before enrolling at Brown, I obtained an M.S. and a B.S. in Computer Science from Kennesaw State University. During my master's program, I was advised by
                             <a href="https://sites.google.com/site/junggabson/">Prof. Junggab Son</a>.</p>
+                        </div>
                       </section>
 
                       <section class="section">
-                        <h1 class="title">News</h1>
+                        <h1 class="title" id="publications">Selected Publications</h1>
+                        <i>Authors are listed in alphabetical order unless indicated by an asterisk (*).</i>
+                        <div class="content">
+                            <h3 >Manuscripts</h3>
+                        <ul>
+                            <li>
+                                <p>
+                                    <b>Lattice-Based Accumulator and Application to Anonymous Credential Revocation</b> <a href="https://ia.cr/2025/1099">[eprint]</a><br>
+                                    Victor Youdom Kemmoe, Anna Lysyanskaya, Ngoc Khanh Nguyen
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Ephemeral Encrypted Data Structures</b><br>
+                                    Seny Kamara, Victor Youdom Kemmoe, Lucy Qin
+                                </p>
+                            </li>
+                        </ul>
+
+                        <h3>Conference/Journal</h3>
+                        <ul>
+                           <li>
+                                <p>
+                                    <b>RSA-Based Dynamic Accumulator without Hashing into Primes</b> <a href="https://ia.cr/2024/505">[eprint]</a> <a href="https://doi.org/10.1145/3658644.3690199">[conference]</a><br>
+                                    Victor Youdom Kemmoe, Anna Lysyanskaya. <i>ACM CCS 2024</i>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Leveraging Smart Contracts for Secure and Asynchronous Group Key Exchange Without Trusted Third Party</b> <a href="https://ieeexplore.ieee.org/document/9827566">[journal]</a><br>
+                                    Victor Youdom Kemmoe<sup>*</sup>, Yongseok Kwon, Rasheed Hussain, Sunghyun Cho, and Junggab Son. <i>IEEE Transactions on Dependable and Secure Computing 2022</i>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Recent Advances in Smart Contracts: A Technical Overview and State of the Art</b> <a href="https://ieeexplore.ieee.org/document/9125932">[journal]</a><br>
+                                    Victor Youdom Kemmoe<sup>*</sup>, William Stone, Jeehyeong Kim, Daeyoung Kim, Junggab Son. <i>IEEE Access 2020</i>
+                                </p>
+                            </li>
+                        </ul>
+                        </div>
                       </section>
+
+                      <section class="section">
+                        <h1 class="title" id="talks">Talks</h1>
+
+                        <div class="content">
+                            <h5>Lattice-Based Accumulator and Application to Anonymous Credential Revocation <a href="source/slides/lat_acc_long.pdf">[Slides]</a></h5>
+                            <ul>
+                                <li>CMU Cylab Crypto Seminar. 09/2025 <a href="https://www.youtube.com/watch?v=XgwGs5t4SrA">[Video]</a></li>
+                                <li>MSR, Cryptography Research Team. 08/2025</li>
+                                <li>Standford Security Seminar. 05/2025</li>
+                                <li>Visa Research. 04/2025</li>
+                            </ul>
+
+                            <h5>RSA-Based Dynamic Accumulator without Hashing into Primes <a href="source/slides/rsa_acc_long.pdf">[Slides]</a></h5>
+                            <ul>
+                                <li>Google Research, Cryptography Research Team. 10/2024</li>
+                                <li>ACM CCS 2024. 10/2024</li>
+                                <li>Yale's Cryptography Seminar. 04/2024</li>
+                            </ul>
+                        </div>
+                    </section>
                 </div>
                
             </div>
