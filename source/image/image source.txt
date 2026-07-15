@@ -2,3 +2,7 @@ image 1:
 	title: y-so-serious-white
 	url: https://www.toptal.com/designers/subtlepatterns/page/2/
 
+image 2:
+	title: charcoal_wood
+	source: Generated for this website with OpenAI image generation on 2026-07-14.
+	prompt: Seamless, low-contrast charcoal-gray ebony wood texture with fine vertical grain for the dark theme.

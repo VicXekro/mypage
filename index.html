@@ -1,166 +1,217 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top">
+<html class="has-navbar-fixed-top" lang="en">
     <head>
-         <!--Declaring character sets-->
-         <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="light dark">
+        <meta name="description" content="Victor Youdom Kemmoe's academic homepage, publications, and talks.">
 
         <title>Victor Youdom Kemmoe</title>
 
-         <!-- Mobile Specific Metas-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="source/bulma-0.9.3/css/bulma.css">
+        <link rel="stylesheet" href="source/bulma-1.0.4/css/bulma.min.css">
         <link rel="stylesheet" href="source/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="source/css/site.css">
+        <script defer src="source/js/site.js"></script>
     </head>
 
-    <!-- https://fontawesome.com/v4.7/icons/ for documentation on fav icon-->
-    <!-- https://www.toptal.com/designers/subtlepatterns/tag/wood/ for patterns-->
-    <!-- Remove the fix height after there is enough contents-->
-    <!-- height: 5000px; -->
-    <body background="source/image/retina_wood.png" style="min-height: 100vh;">
-        <script src="source/bulma-0.9.3/custom.js"></script>
+    <body id="top">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
 
-        <!-- Navigation Menu -->
-        <nav class="navbar is-fixed-top is-transparent is-dark" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="Main navigation">
+            <div class="navbar-inner">
+                <div class="navbar-brand">
+                    <button class="button theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+                        <span class="icon" aria-hidden="true">
+                            <i class="fa fa-sun-o"></i>
+                        </span>
+                    </button>
+                    <button class="navbar-burger" type="button" aria-label="Open navigation menu" aria-expanded="false" data-target="navMenu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
 
-            <div class="navbar-brand">
-                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                </a>
-             </div>
-
-            <div class="navbar-menu navbar-end" id="navMenu">
-                <a class="navbar-item is-active" >
-                    Home
-                </a>
-
-                <a class="navbar-item" href="#publications">
-                    Publications
-                </a>
-
-                <a class="navbar-item" href="#talks">
-                    Talks
-                </a>
-
-                <!--<a class="navbar-item">
-                    Blog
-                </a>-->
-                
-              </div>
+                <div class="navbar-menu" id="navMenu">
+                    <div class="navbar-end">
+                        <a class="navbar-item is-active" href="#top" aria-current="page">Home</a>
+                        <a class="navbar-item" href="#publications">Publications</a>
+                        <a class="navbar-item" href="#talks">Talks</a>
+                    </div>
+                </div>
             </div>
         </nav>
 
-        <!-- Main body -->
-        <div style="margin-left: 15%; margin-right: 15%; padding-top: 20px; padding-bottom: 20px;">
-
-            <div class="columns ">
-
-                <!-- Name of the background color is: bisque-->
-                <div class="column is-one-third" style="background-color: rgba(255, 228, 196, 0.60);">
+        <main class="site-shell" id="main-content">
+            <div class="columns is-desktop is-gapless site-columns">
+                <aside class="column is-one-third-desktop profile-panel" aria-label="Profile">
                     <div class="content has-text-centered">
-                        <div style="display: flex; justify-content: center;">
-                            <figure class="image" >
-                                <img class="is-rounded" style="height: auto; width: 256px;" src="source/image/Victor045.jpg">
-                            </figure>
-                        </div>
+                        <figure class="image profile-photo">
+                            <img class="is-rounded" src="source/image/Victor045.jpg" alt="Portrait of Victor Youdom Kemmoe" width="256" height="256">
+                        </figure>
 
-                        <h4 class="title is-4">Victor Youdom Kemmoe</h4>
-                        
-                        <a class="button is-white" href="mailto:victor.y.k@brown.edu"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                        <a class="button is-white" href="https://github.com/VicXekro"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        <a class="button is-white" href="https://twitter.com/VicXekro"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a class="button is-white" href="https://scholar.google.com/citations?user=1KDf1voAAAAJ&hl=en&oi=ao"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+                        <h1 class="title is-4">Victor Youdom Kemmoe</h1>
+
+                        <div class="profile-links" aria-label="Contact and profile links">
+                            <a class="button social-button" href="mailto:victor.y.k@brown.edu" aria-label="Email Victor Youdom Kemmoe" title="Email">
+                                <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            </a>
+                            <a class="button social-button" href="https://github.com/VicXekro" aria-label="GitHub profile" title="GitHub">
+                                <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span>
+                            </a>
+                            <a class="button social-button" href="https://twitter.com/VicXekro" aria-label="Twitter profile" title="Twitter">
+                                <span class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                            </a>
+                            <a class="button social-button" href="https://scholar.google.com/citations?user=1KDf1voAAAAJ&amp;hl=en&amp;oi=ao" aria-label="Google Scholar profile" title="Google Scholar">
+                                <span class="icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </aside>
 
-                <!-- Name of the background color is: florawhite-->
-                <div class="column" style="background-color: rgba(255, 250, 240, 0.60);">
-                    <section class="section">
-                        <h1 class="title">About</h1>
+                <div class="column content-panel">
+                    <section class="section content-section" aria-labelledby="about-heading">
+                        <h2 class="title" id="about-heading">About</h2>
                         <div class="content">
-                        <p>I am a Ph.D. student in Computer Science at Brown University where I am advised by <a href="https://cs.brown.edu/people/alysyans/">Prof. Anna Lysyanskaya</a>. My main research area is Cryptography. Recently, I have been focusing on lattice-based cryptography and the management of digital credentials.
-                            
-                            <!--Previously, I was advised by 
-                            <a href="http://cs.brown.edu/~seny/" >Prof. Seny Kamara</a> and 
-                            <a href="https://cs.brown.edu/~mph/">Prof. Maurice Herlihy</a>.</p> -->
+                            <p>I am a Ph.D. student in Computer Science at Brown University where I am advised by <a href="https://cs.brown.edu/people/alysyans/">Prof. Anna Lysyanskaya</a>. My main research area is Cryptography. Recently, I have been focusing on lattice-based cryptography and the management of digital credentials.</p>
 
-                        <p>Before enrolling at Brown, I obtained an M.S. and a B.S. in Computer Science from Kennesaw State University. During my master's program, I was advised by
-                            <a href="https://sites.google.com/site/junggabson/">Prof. Junggab Son</a>.</p>
+                            <p>Before enrolling at Brown, I obtained an M.S. and a B.S. in Computer Science from Kennesaw State University. During my master's program, I was advised by <a href="https://sites.google.com/site/junggabson/">Prof. Junggab Son</a>.</p>
                         </div>
-                      </section>
+                    </section>
 
-                      <section class="section">
-                        <h1 class="title" id="publications">Selected Publications</h1>
-                        <i>Authors are listed in alphabetical order unless indicated by an asterisk (*).</i>
+                    <section class="section content-section" aria-labelledby="publications">
+                        <h2 class="title anchor-heading" id="publications">Selected Publications</h2>
+                        <p class="publication-note"><em>Authors are listed in alphabetical order unless indicated by an asterisk (*).</em></p>
+
                         <div class="content">
-                            <h3 >Manuscripts</h3>
-                        <ul>
-                            <li>
-                                <p>
-                                    <b>Lattice-Based Rate-Limited Tokens in the Random Oracle Model</b><br>
-                                    Victor Youdom Kemmoe, Anna Lysyanskaya, Ngoc Khanh Nguyen.
-                                </p>
-                            </li>
-                            
-                            <li>
-                                <p>
-                                    <b>Ephemeral Encrypted Data Structures</b><br>
-                                    Seny Kamara, Victor Youdom Kemmoe, Lucy Qin
-                                </p>
-                            </li>
-                        </ul>
+                            <h3>Manuscripts</h3>
+                            <ul class="publication-list">
+                                <li>
+                                    <p><strong>Lattice-Based Rate-Limited Tokens in the Random Oracle Model</strong><br>
+                                    Victor Youdom Kemmoe, Anna Lysyanskaya, Ngoc Khanh Nguyen.</p>
+                                </li>
+                                <li>
+                                    <p><strong>Ephemeral Encrypted Data Structures</strong><br>
+                                    Seny Kamara, Victor Youdom Kemmoe, Lucy Qin</p>
+                                </li>
+                            </ul>
 
-                        <h3>Conference/Journal</h3>
-                        <ul>
-                            <li>
-                                <p>
-                                    <b>Lattice-Based Accumulator and Application to Anonymous Credential Revocation</b> <a href="https://ia.cr/2025/1099">[eprint]</a><br>
-                                    Victor Youdom Kemmoe, Anna Lysyanskaya, Ngoc Khanh Nguyen. <i>PKC 2026</i>
-                                </p>
-                            </li>
-                           <li>
-                                <p>
-                                    <b>RSA-Based Dynamic Accumulator without Hashing into Primes</b> <a href="https://ia.cr/2024/505">[eprint]</a> <a href="https://doi.org/10.1145/3658644.3690199">[conference]</a><br>
-                                    Victor Youdom Kemmoe, Anna Lysyanskaya. <i>ACM CCS 2024</i>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <b>Leveraging Smart Contracts for Secure and Asynchronous Group Key Exchange Without Trusted Third Party</b> <a href="https://ieeexplore.ieee.org/document/9827566">[journal]</a><br>
-                                    Victor Youdom Kemmoe<sup>*</sup>, Yongseok Kwon, Rasheed Hussain, Sunghyun Cho, and Junggab Son. <i>IEEE Transactions on Dependable and Secure Computing 2022</i>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <b>Recent Advances in Smart Contracts: A Technical Overview and State of the Art</b> <a href="https://ieeexplore.ieee.org/document/9125932">[journal]</a><br>
-                                    Victor Youdom Kemmoe<sup>*</sup>, William Stone, Jeehyeong Kim, Daeyoung Kim, Junggab Son. <i>IEEE Access 2020</i>
-                                </p>
-                            </li>
-                        </ul>
+                            <h3>Conference/Journal</h3>
+                            <ul class="publication-list">
+                                <li>
+                                    <p>
+                                        <strong>Lattice-Based Accumulator and Application to Anonymous Credential Revocation</strong>
+                                        <span class="resource-actions">
+                                            <a class="button is-small resource-button" href="https://ia.cr/2025/1099" aria-label="Read the ePrint manuscript for Lattice-Based Accumulator and Application to Anonymous Credential Revocation">
+                                                <span class="icon is-small"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span>
+                                                <span>ePrint</span>
+                                            </a>
+                                            <a class="button is-small resource-button publisher-button" href="https://link.springer.com/chapter/10.1007/978-3-032-26737-5_13" aria-label="Open the Springer publication for Lattice-Based Accumulator and Application to Anonymous Credential Revocation">
+                                                <span class="publisher-mark" aria-hidden="true">Springer</span>
+                                                <span>Publication</span>
+                                            </a>
+                                        </span><br>
+                                        Victor Youdom Kemmoe, Anna Lysyanskaya, Ngoc Khanh Nguyen. <em>PKC 2026</em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>RSA-Based Dynamic Accumulator without Hashing into Primes</strong>
+                                        <span class="resource-actions">
+                                            <a class="button is-small resource-button" href="https://ia.cr/2024/505" aria-label="Read the ePrint manuscript for RSA-Based Dynamic Accumulator without Hashing into Primes">
+                                                <span class="icon is-small"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span>
+                                                <span>ePrint</span>
+                                            </a>
+                                            <a class="button is-small resource-button publisher-button" href="https://doi.org/10.1145/3658644.3690199" aria-label="Open the ACM publication for RSA-Based Dynamic Accumulator without Hashing into Primes">
+                                                <span class="publisher-mark" aria-hidden="true">ACM</span>
+                                                <span>Publication</span>
+                                            </a>
+                                        </span><br>
+                                        Victor Youdom Kemmoe, Anna Lysyanskaya. <em>ACM CCS 2024</em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Leveraging Smart Contracts for Secure and Asynchronous Group Key Exchange Without Trusted Third Party</strong>
+                                        <span class="resource-actions">
+                                            <a class="button is-small resource-button publisher-button" href="https://ieeexplore.ieee.org/document/9827566" aria-label="Open the IEEE journal publication for Leveraging Smart Contracts for Secure and Asynchronous Group Key Exchange Without Trusted Third Party">
+                                                <span class="publisher-mark" aria-hidden="true">IEEE</span>
+                                                <span>Journal</span>
+                                            </a>
+                                        </span><br>
+                                        Victor Youdom Kemmoe<sup>*</sup>, Yongseok Kwon, Rasheed Hussain, Sunghyun Cho, and Junggab Son. <em>IEEE Transactions on Dependable and Secure Computing 2022</em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Recent Advances in Smart Contracts: A Technical Overview and State of the Art</strong>
+                                        <span class="resource-actions">
+                                            <a class="button is-small resource-button publisher-button" href="https://ieeexplore.ieee.org/document/9125932" aria-label="Open the IEEE journal publication for Recent Advances in Smart Contracts">
+                                                <span class="publisher-mark" aria-hidden="true">IEEE</span>
+                                                <span>Journal</span>
+                                            </a>
+                                        </span><br>
+                                        Victor Youdom Kemmoe<sup>*</sup>, William Stone, Jeehyeong Kim, Daeyoung Kim, Junggab Son. <em>IEEE Access 2020</em>
+                                    </p>
+                                </li>
+                            </ul>
                         </div>
-                      </section>
+                    </section>
 
-                      <section class="section">
-                        <h1 class="title" id="talks">Talks</h1>
+                    <section class="section content-section" aria-labelledby="talks">
+                        <h2 class="title anchor-heading" id="talks">Talks</h2>
 
                         <div class="content">
-                            <h5>Lattice-Based Rate-Limited Tokens in the Random Oracle Model</h5>
+                            <h3 class="talk-title">Lattice-Based Rate-Limited Tokens in the Random Oracle Model</h3>
                             <ul>
+                                <li>Mongo DB Cryptography Research Group. 06/2026</li>
                                 <li>Anonymity Day at <a href="https://sites.google.com/tufts.edu/4th-anonymity-day-workshop/home">Tufts</a>. 06/2026</li>
                             </ul>
 
-                            <h5>Lattice-Based Accumulator and Application to Anonymous Credential Revocation <a href="source/slides/lat_acc_long.pdf">[Slides]</a></h5>
+                            <h3 class="talk-title">
+                                Lattice-Based Accumulator and Application to Anonymous Credential Revocation
+                                <span class="resource-actions">
+                                    <a class="button is-small resource-button" href="source/slides/lat_acc_long.pdf" aria-label="Open slides for Lattice-Based Accumulator and Application to Anonymous Credential Revocation">
+                                        <span class="icon is-small"><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i></span>
+                                        <span>Slides</span>
+                                    </a>
+                                </span>
+                            </h3>
                             <ul>
                                 <li>PKC 2026. 05/2026</li>
                                 <li>Boston University Security Seminar. 11/2025</li>
-                                <li>CMU Cylab Crypto Seminar. 09/2025 <a href="https://www.youtube.com/watch?v=XgwGs5t4SrA">[Video]</a></li>
-                                <li>MSR, Cryptography Research Team. 08/2025 <a href="https://www.youtube.com/watch?v=YLXVH30Ho1M">[Video]</a></li>
-                                <li>Standford Security Seminar. 05/2025</li>
+                                <li>
+                                    CMU Cylab Crypto Seminar. 09/2025
+                                    <span class="resource-actions">
+                                        <a class="button is-small resource-button video-button" href="https://www.youtube.com/watch?v=XgwGs5t4SrA" aria-label="Watch the CMU Cylab Crypto Seminar video">
+                                            <span class="icon is-small"><i class="fa fa-play-circle" aria-hidden="true"></i></span>
+                                            <span>Video</span>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    MSR, Cryptography Research Team. 08/2025
+                                    <span class="resource-actions">
+                                        <a class="button is-small resource-button video-button" href="https://www.youtube.com/watch?v=YLXVH30Ho1M" aria-label="Watch the Microsoft Research Cryptography Research Team video">
+                                            <span class="icon is-small"><i class="fa fa-play-circle" aria-hidden="true"></i></span>
+                                            <span>Video</span>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>Stanford Security Seminar. 05/2025</li>
                                 <li>Visa Research. 04/2025</li>
                             </ul>
 
-                            <h5>RSA-Based Dynamic Accumulator without Hashing into Primes <a href="source/slides/rsa_acc_long.pdf">[Slides]</a></h5>
+                            <h3 class="talk-title">
+                                RSA-Based Dynamic Accumulator without Hashing into Primes
+                                <span class="resource-actions">
+                                    <a class="button is-small resource-button" href="source/slides/rsa_acc_long.pdf" aria-label="Open slides for RSA-Based Dynamic Accumulator without Hashing into Primes">
+                                        <span class="icon is-small"><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i></span>
+                                        <span>Slides</span>
+                                    </a>
+                                </span>
+                            </h3>
                             <ul>
                                 <li>Google Research, Cryptography Research Team. 10/2024</li>
                                 <li>ACM CCS 2024. 10/2024</li>
@@ -169,18 +220,13 @@
                         </div>
                     </section>
                 </div>
-               
             </div>
+        </main>
 
-            
-        </div>
-        
-        <footer class="footer" style="padding: 3rem 1.5rem 3rem; background-color: transparent;">
+        <footer class="footer site-footer">
             <div class="content has-text-centered">
-              <p>
-                Powered by <a href="https://bulma.io/">Bulma</a>.
-              </p>
+                <p>Powered by <a href="https://bulma.io/">Bulma</a>.</p>
             </div>
-          </footer>
+        </footer>
     </body>
 </html>
