@@ -287,7 +287,71 @@ a:not(.button):focus-visible {
 }
 
 .publication-list > li + li {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
+}
+
+.publication-list > li > p {
+    margin-bottom: 0;
+}
+
+.paper-abstract {
+    margin-top: 0.5rem;
+    min-width: 0;
+}
+
+.paper-abstract:not([open]) {
+    margin-top: 0;
+}
+
+.paper-abstract > summary[hidden] {
+    display: none;
+}
+
+.abstract-toggle {
+    list-style: none;
+    cursor: pointer;
+}
+
+.abstract-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.abstract-toggle:focus-visible,
+.abstract-body:focus-visible {
+    outline: 2px solid var(--site-link);
+    outline-offset: 3px;
+}
+
+.abstract-toggle .fa {
+    transition: transform 0.15s ease;
+}
+
+.paper-abstract[open] > .abstract-toggle .fa,
+.abstract-toggle[aria-expanded="true"] .fa {
+    transform: rotate(90deg);
+}
+
+.abstract-body.box {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-top: 0.75rem;
+    padding: clamp(0.85rem, 2vw, 1.25rem);
+    border: 1px solid var(--site-panel-border);
+    background-color: var(--site-content-panel);
+    color: var(--bulma-text);
+    box-shadow: none;
+    line-height: 1.65;
+    overflow-x: auto;
+}
+
+/* Long equations scroll inside their abstract instead of widening the page. */
+.abstract-body mjx-container[display="true"] {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-block: 0.25rem;
 }
 
 .resource-actions {
@@ -357,6 +421,13 @@ a:not(.button):focus-visible {
     background-color: transparent;
 }
 
+/* Include tablets in portrait and landscape, below Bulma's widescreen breakpoint. */
+@media screen and (max-width: 1215px) {
+    .publication-list .paper-abstract {
+        margin-left: -2em;
+    }
+}
+
 @media screen and (max-width: 1023px) {
     .navbar-inner {
         display: block;
@@ -410,6 +481,11 @@ a:not(.button):focus-visible {
     .publication-list,
     .content ul {
         margin-left: 1.15em;
+    }
+
+    /* Offset the list indent so abstracts have equal space on both sides. */
+    .publication-list .paper-abstract {
+        margin-left: -1.15em;
     }
 
     .resource-actions {

@@ -1,6 +1,6 @@
 # Project notes and handoff guide
 
-Last updated: 2026-07-15
+Last updated: 2026-10-21
 
 ## Purpose
 
@@ -43,6 +43,8 @@ Always run `git status --short --branch` at the beginning of a new session becau
 - With no saved preference, the page follows `prefers-color-scheme` from the visitor's browser or operating system.
 - Clicking the theme button creates a persistent light or dark override.
 - The navbar script updates `aria-expanded`, closes the mobile menu after navigation, and supports the Escape key.
+- [`js/abstracts.js`](js/abstracts.js) configures MathJax and renders each abstract on first opening. It loads before the local MathJax bundle.
+- `mathjax-3.2.2/tex-svg-full.js` is the pinned, self-contained TeX/SVG bundle, with its upstream license alongside it. No CDN or external fonts are needed for abstract equations. The optional MathJax context menu is disabled to avoid loading additional menu/accessibility extensions.
 
 ### Images and documents
 
@@ -125,6 +127,18 @@ When changing a theme value, update both its automatic and forced-theme definiti
 - Keep `aria-label` text descriptive and keep decorative icons marked `aria-hidden="true"`.
 - Follow [`PUBLISHER_MARKS.md`](PUBLISHER_MARKS.md) for copy-ready examples.
 
+### Editing paper abstracts
+
+- Every paper in `index.html` has a native `<details class="paper-abstract">` disclosure beneath its citation. These start collapsed and work with mouse, keyboard, and even without JavaScript (math rendering requires JavaScript).
+- With JavaScript enabled, `source/js/abstracts.js` creates a matching Abstract button in that paper's `.resource-actions` row beside ePrint/Publication/Journal and hides the native summary. The button tracks `aria-expanded` and controls the abstract below the citation. Without JavaScript, the native summary remains available beneath the citation.
+- Replace `<p>Abstract coming soon.</p>` inside that paper's `.abstract-body` with the abstract. Use a separate `<p>...</p>` element for each paragraph: blank lines inside one `<p>` are collapsed by the browser. Escape HTML characters such as `&` and `<` as `&amp;` and `&lt;`.
+- Use `\(x^2\)` or `$x^2$` for inline math and `\[x^2\]` or `$$x^2$$` for display math. Write single backslashes directly in HTML. TeX/AMS notation is supported; custom macros can be configured in `source/js/abstracts.js`.
+- MathJax processes math expressions, not a complete LaTeX document: use `<em>text</em>` instead of `\emph{text}` in prose and separate paragraphs with `<p>...</p>`. The custom math macros `\ttn` and `\ttt` currently expand to `n` (number of parties) and `t` (threshold).
+- Publication entries use a `0.75rem` gap; their citation paragraphs have no bottom margin so collapsed abstracts do not add an extra paragraph gap.
+- Abstract controls reuse Bulma's `button is-small` and the existing resource-button theme. The text area uses Bulma's `box` with the site's theme variables.
+- Text wraps to the available width. Oversized equations scroll horizontally within the abstract, whose focusable container also allows keyboard scrolling.
+- Copy the entire `<details>` block when adding a publication; no JavaScript registration or unique ID is required.
+
 ### Footer
 
 - “Powered by Bulma” is centered with flexbox.
@@ -135,6 +149,7 @@ When changing a theme value, update both its automatic and forced-theme definiti
 - Primary target: iPhone 12 Mini-sized viewports and larger.
 - At `1023px` and below, the navbar switches to its touch layout and the profile/content columns stack.
 - At `480px` and below, outer and section spacing is reduced and resource-action groups become full-width flex rows that wrap.
+- Below Bulma's widescreen breakpoint (`1215px` and below), `.paper-abstract` offsets the publication list's `2em` left indent so abstract boxes have equal left/right margins on tablets in portrait and landscape. At `480px` and below, the offset is `1.15em` to match the mobile list indent. Keep these offsets synchronized with the list indentation; internal box padding is already symmetric.
 - Long titles and list items use `overflow-wrap: anywhere` as a last-resort safeguard.
 - The page, navbar, shell, and main columns are constrained to the viewport width.
 - Horizontal overflow is clipped after the content has been given normal wrapping opportunities.

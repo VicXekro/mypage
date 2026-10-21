@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="source/bulma-1.0.4/css/bulma.min.css">
         <link rel="stylesheet" href="source/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="source/css/site.css">
+        <script defer src="source/js/abstracts.js"></script>
+        <script defer src="source/mathjax-3.2.2/tex-svg-full.js"></script>
         <script defer src="source/js/site.js"></script>
     </head>
 
@@ -95,6 +97,18 @@
                                             </a>
                                         </span><br>
                                     Scott Griffy, Victor Youdom Kemmoe, Ngoc Khanh Nguyen, Tjerand Silde</p>
+                                    <details class="paper-abstract">
+                                        <summary class="button is-small resource-button abstract-toggle">
+                                            <span class="icon is-small"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                            <span>Abstract</span>
+                                        </summary>
+                                        <div class="box abstract-body" tabindex="0" role="region" aria-label="Abstract">
+                                            <!-- Use a separate <p>...</p> for each paragraph; HTML ignores blank lines. Math: \(x^2\) inline or \[x^2\] on its own line. -->
+                                            <p>Lattice-based zero-knowledge proofs are now efficient enough for practical use, but in all known constructions a single prover holds the entire witness and is therefore a single point of failure. Thresholdizing them is understood only for three-round $\Sigma$-protocols, which certify shortness only <em>approximately</em>. The <em>exact</em> statements needed by applications such as anonymous credentials require more rounds and rely on rejection sampling, and neither property survives thresholdization.</p>
+                                            <p>We construct the first lattice-based threshold zero-knowledge proof systems for exact relations. The witness is Shamir-shared among $\ttn$ parties, any $\ttt$ of them can jointly produce a proof, and the proof has the same form as a single-prover proof, only a factor $\sqrt{\ttt}$ larger, with verification unchanged. We thresholdize the product proof of Attema, Lyubashevsky, and Seiler (CRYPTO 2020) and the exact proof of Esgin, Nguyen, and Seiler (ASIACRYPT 2020), making both rejection-free using Hint-MLWE and evaluating them over threshold homomorphic encryption. We define threshold commit-and-prove protocols with the corresponding zero-knowledge and simulation-extractability notions, and prove our constructions secure against passive adversaries that statically corrupt at most $\ttt-1$ parties.</p>
+                                            <p>Of independent interest, we show that the Fiat--Shamir transforms of both proof systems are simulation-extractable in the random oracle model, and that MLWE remains hard when secrets are drawn from the subring fixed by a ring automorphism.</p>
+                                        </div>
+                                    </details>
                                 </li>
                                 
                             </ul>
@@ -109,6 +123,19 @@
                                             </a>
                                         </span><br>
                                     Victor Youdom Kemmoe, Anna Lysyanskaya, Ngoc Khanh Nguyen. <em>TCC 2026</em></p>
+                                    <details class="paper-abstract">
+                                        <summary class="button is-small resource-button abstract-toggle">
+                                            <span class="icon is-small"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                            <span>Abstract</span>
+                                        </summary>
+                                        <div class="box abstract-body" tabindex="0" role="region" aria-label="Abstract">
+                                            <!-- Use a separate <p>...</p> for each paragraph; HTML ignores blank lines. Math: \(x^2\) inline or \[x^2\] on its own line. -->
+                                            <p>An anonymous credential allows a user to prove that she is authorized in an anonymous and unlinkable fashion.  A rate-limited token is an anonymous credential that can only be used a limited number of times in any particular context; this means that even though we do not know which users are gaining access to a resource, there is a limit to how many resources one user may consume.  Such tokens are becoming an increasingly attractive way to balance privacy with authorized access. Although a general architecture for how to obtain rate-limited tokens from digital signatures, pseudorandom functions (PRFs), and non-interactive zero-knowledge proofs (NIZKs) has been known for over twenty years, efficiently instantiating it with post-quantum-secure signatures and proofs has, until now, remained an open problem.</p>
+                                            <p>In this work, we present the first lattice-based construction of rate-limited tokens and tackle the practical challenges associated with using lattice-based building blocks in this setting. A central difficulty lies in the absence of lattice-based PRFs that support efficient NIZK proofs of correct evaluation. We show that, in the random oracle model, a weak PRF—where adversaries are restricted to querying random inputs—suffices. We further present a weak PRF construction that both admits efficient NIZK proofs and remains secure—even when adversaries have partial control over the randomness—and extend this guarantee more generally to key-homomorphic PRFs.</p>
+                                            <p>Another contribution, which is of independent interest, is the first lattice-based construction of partially binding commitments, a primitive introduced by Goel et al. (Eurocrypt 2022) that was previously known only under discrete-log assumptions. We give a practical construction that enables succinct disjunctive proofs via a variant of the self-stacking compiler of Goel et al. Along the way, we develop a new technique for batching CNF proofs of $\Sigma$-protocols, which allows one to efficiently prove that a value is the output of a PRF on one of a set of inputs. As a direct application, this yields logarithmic-size lattice-based ring signatures based on Fiat–Shamir-with-Aborts $\Sigma$-protocols (Lyubashevsky, Eurocrypt 2012).</p>
+                                            <p>Finally, we observe for the first time that the anonymous counting tokens of Benhamouda, Raykova, and Seth (Asiacrypt 2023) can be obtained from anonymous rate-limited tokens. This yields a construction whose communication complexity is independent of the number of tokens that need to be issued.</p>
+                                        </div>
+                                    </details>
                                 </li>
                                 <li>
                                     <p>
@@ -125,6 +152,16 @@
                                         </span><br>
                                         Victor Youdom Kemmoe, Anna Lysyanskaya, Ngoc Khanh Nguyen. <em>PKC 2026</em>
                                     </p>
+                                    <details class="paper-abstract">
+                                        <summary class="button is-small resource-button abstract-toggle">
+                                            <span class="icon is-small"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                            <span>Abstract</span>
+                                        </summary>
+                                        <div class="box abstract-body" tabindex="0" role="region" aria-label="Abstract">
+                                            <!-- Use a separate <p>...</p> for each paragraph; HTML ignores blank lines. Math: \(x^2\) inline or \[x^2\] on its own line. -->
+                                            <p>An accumulator is a cryptographic system for compactly representing a set of elements such that every element in the set has a short membership witness. A dynamic accumulator, furthermore, allows elements to be added to and deleted from the accumulator.  Camenisch and Lysyanskaya (CRYPTO'02) constructed the first dynamic accumulator under the strong-RSA assumption and showed how it can be used to enable revocation of anonymous credentials.  In this paper, we give a lattice-based dynamic accumulator tailor-made for enabling revocation of post-quantum anonymous credential systems. As a concrete example, we instantiate our dynamic accumulator on top of the anonymous credential system implemented in the LaZer library (ACM CCS 2024).</p>
+                                        </div>
+                                    </details>
                                 </li>
                                 <li>
                                     <p>
@@ -141,6 +178,18 @@
                                         </span><br>
                                         Victor Youdom Kemmoe, Anna Lysyanskaya. <em>ACM CCS 2024</em>
                                     </p>
+                                    <details class="paper-abstract">
+                                        <summary class="button is-small resource-button abstract-toggle">
+                                            <span class="icon is-small"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                            <span>Abstract</span>
+                                        </summary>
+                                        <div class="box abstract-body" tabindex="0" role="region" aria-label="Abstract">
+                                            <!-- Use a separate <p>...</p> for each paragraph; HTML ignores blank lines. Math: \(x^2\) inline or \[x^2\] on its own line. -->
+                                            <p>A cryptographic accumulator is a compact data structure for representing a set of elements coming from some domain. It allows for a compact proof of membership and, in the case of a universal accumulator, non-membership of an element $x$ in the data structure. A dynamic accumulator, furthermore, allows elements to be added to and deleted from the accumulator.</p>
+                                            <p>Previously known RSA-based dynamic accumulators were too slow in practice because they required that an element in the domain be represented as a prime number. Accumulators based on settings other than RSA had other drawbacks such as requiring a prohibitively large common reference string or a trapdoor, or not permitting deletions.</p>
+                                            <p>In this paper, we construct RSA-based dynamic accumulators that do not require that the accumulated elements be represented as primes. We also show how to aggregate membership and non-membership witnesses and batch additions and deletions. We demonstrate that, for 112-bit, 128-bit, and 192-bit security, the efficiency gains compared to previously known RSA-based accumulators are substantial, and, for the first time, make cryptographic accumulators a viable candidate for a certificate revocation mechanism as part of a WebPKI-type system. To achieve an efficient verification time for aggregated witnesses, we introduce a variant of Wesolowski’s proof of exponentiation (Journal of Cryptology 2020) that does not require hashing into primes.</p>
+                                        </div>
+                                    </details>
                                 </li>
                                 <li>
                                     <p>
@@ -153,6 +202,16 @@
                                         </span><br>
                                         Victor Youdom Kemmoe<sup>*</sup>, Yongseok Kwon, Rasheed Hussain, Sunghyun Cho, and Junggab Son. <em>IEEE Transactions on Dependable and Secure Computing 2022</em>
                                     </p>
+                                    <details class="paper-abstract">
+                                        <summary class="button is-small resource-button abstract-toggle">
+                                            <span class="icon is-small"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                            <span>Abstract</span>
+                                        </summary>
+                                        <div class="box abstract-body" tabindex="0" role="region" aria-label="Abstract">
+                                            <!-- Use a separate <p>...</p> for each paragraph; HTML ignores blank lines. Math: \(x^2\) inline or \[x^2\] on its own line. -->
+                                            <p>Group Key Exchange (GKE) is an important tool to develop secure multi-user applications such as group text messages, ad-hoc networks, and so on. Most of the currently deployed GKE schemes are synchronous, i.e., they require all the participants to be online during their execution. However, with more battery-powered devices being used in such applications, the synchronicity requirement is challenging to fulfill. To fill the gaps, asynchronous GKE schemes have been introduced in the literature. Nevertheless, the currently available asynchronous and synchronous GKE schemes rely on Trusted Third Parties (TTPs) for key establishment and management. To this end, reliance on TTPs is a serious shortcoming since TTPs are well known to be the single point of failure. Furthermore, the existing GKE schemes require participants to perform all computations, which can degrade the performance of resource-constrained devices such as Internet of Things (IoT) devices. To solve these problems, in this paper, we propose an asynchronous GKE scheme that uses blockchain and smart contracts to store the security keys-related material and reduce the computational load of the participants. Furthermore, our proposed scheme provides Perfect Forward Secrecy (PFS) and Post-Compromised Security (PCS). Our implementation on Ethereum shows that the proposed scheme can scale to more than 100 participants when combined with a distributed storage system.</p>
+                                        </div>
+                                    </details>
                                 </li>
                                 <li>
                                     <p>
@@ -165,6 +224,16 @@
                                         </span><br>
                                         Victor Youdom Kemmoe<sup>*</sup>, William Stone, Jeehyeong Kim, Daeyoung Kim, Junggab Son. <em>IEEE Access 2020</em>
                                     </p>
+                                    <details class="paper-abstract">
+                                        <summary class="button is-small resource-button abstract-toggle">
+                                            <span class="icon is-small"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                            <span>Abstract</span>
+                                        </summary>
+                                        <div class="box abstract-body" tabindex="0" role="region" aria-label="Abstract">
+                                            <!-- Use a separate <p>...</p> for each paragraph; HTML ignores blank lines. Math: \(x^2\) inline or \[x^2\] on its own line. -->
+                                            <p> Smart contracts, as an added functionality to blockchain, have received increased attention recently. They are executable programs whose instance and state are stored in blockchain. Hence, smart contracts and blockchain enable a trustable, trackable, and irreversible protocol without the need for trusted third parties which generally constitute a single point of failure. If a user creates and distributes a smart contract, others will be able to interact with it while the underlying blockchain ensures a trustable execution. In this paper, we aim to introduce state-of-the-art technologies of the smart contract protocol. We firstly introduce the history of blockchain and smart contracts followed by their step-by-step operations. Then, we introduce the survey results which are classified into four categories based on their purposes: cryptography, access management, social application, and smart contract structure. By presenting the most recent knowledge, this paper will contribute to the advances and proliferation of smart contracts. </p>
+                                        </div>
+                                    </details>
                                 </li>
                             </ul>
                         </div>
