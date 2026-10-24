@@ -1,6 +1,6 @@
 # Project notes and handoff guide
 
-Last updated: 2026-10-21
+Last updated: 2026-10-23
 
 ## Purpose
 
@@ -127,6 +127,23 @@ When changing a theme value, update both its automatic and forced-theme definiti
 - Keep `aria-label` text descriptive and keep decorative icons marked `aria-hidden="true"`.
 - Follow [`PUBLISHER_MARKS.md`](PUBLISHER_MARKS.md) for copy-ready examples.
 
+### Publications layout
+
+- Publications use semantic lists without bullets or indentation (`role="list"` preserves accessibility). Entries are separated by subtle theme-colored borders.
+- Each `.publication-item` has a paper title (`h4.publication-title`), authors, an optional venue/year line, and a Bulma `buttons are-small` group with `resource-actions publication-actions` classes.
+- Victor's name in each author list uses `<em class="publication-owner">` with italic styling and the same weight and color as the other authors. Keep author order and any asterisk superscripts intact.
+- Resource buttons occupy their own wrapping row. The existing abstract script appends the Abstract button there; abstracts remain collapsed until clicked and expand below the entry's resource row.
+- Titles, authors, and long venue names wrap naturally. Abstracts align with both section edges at every width; no negative-margin correction is needed because the list has no indent.
+
+### Talks layout
+
+- Talks remain grouped by paper in labelled `.talk-group` sections. Shared slides use Bulma's `buttons are-small` group beneath the title; recordings stay next to the corresponding event.
+- Each semantic list item uses Bulma's responsive `level` layout: event on the left and date on the right at `769px` and above, stacked with left-aligned dates at `768px` and below.
+- Dates use `<time datetime="YYYY-MM">Mon YYYY</time>`. Do not invent exact days or add upcoming badges.
+- `.talk-list` removes bullets and indentation; rows have subtle theme-colored separators. `role="list"` preserves list semantics when bullets are hidden.
+- Keep `.talk-event` flexible so long event names and video buttons wrap without pushing dates outside the content panel.
+- Keep the layout compact with `0.45rem` vertical row padding, a `0.15rem` gap between stacked event/date text, and `1.35rem` between talk groups. Font sizes and button sizes stay unchanged.
+
 ### Editing paper abstracts
 
 - Every paper in `index.html` has a native `<details class="paper-abstract">` disclosure beneath its citation. These start collapsed and work with mouse, keyboard, and even without JavaScript (math rendering requires JavaScript).
@@ -134,7 +151,7 @@ When changing a theme value, update both its automatic and forced-theme definiti
 - Replace `<p>Abstract coming soon.</p>` inside that paper's `.abstract-body` with the abstract. Use a separate `<p>...</p>` element for each paragraph: blank lines inside one `<p>` are collapsed by the browser. Escape HTML characters such as `&` and `<` as `&amp;` and `&lt;`.
 - Use `\(x^2\)` or `$x^2$` for inline math and `\[x^2\]` or `$$x^2$$` for display math. Write single backslashes directly in HTML. TeX/AMS notation is supported; custom macros can be configured in `source/js/abstracts.js`.
 - MathJax processes math expressions, not a complete LaTeX document: use `<em>text</em>` instead of `\emph{text}` in prose and separate paragraphs with `<p>...</p>`. The custom math macros `\ttn` and `\ttt` currently expand to `n` (number of parties) and `t` (threshold).
-- Publication entries use a `0.75rem` gap; their citation paragraphs have no bottom margin so collapsed abstracts do not add an extra paragraph gap.
+- Publication entries use compact title/author/venue spacing and `0.8rem` vertical padding around separators; collapsed abstracts add no extra gap. Resource rows have a `0.45rem` top margin, and publication groups have a `1.4rem` heading gap.
 - Abstract controls reuse Bulma's `button is-small` and the existing resource-button theme. The text area uses Bulma's `box` with the site's theme variables.
 - Text wraps to the available width. Oversized equations scroll horizontally within the abstract, whose focusable container also allows keyboard scrolling.
 - Copy the entire `<details>` block when adding a publication; no JavaScript registration or unique ID is required.
@@ -149,7 +166,7 @@ When changing a theme value, update both its automatic and forced-theme definiti
 - Primary target: iPhone 12 Mini-sized viewports and larger.
 - At `1023px` and below, the navbar switches to its touch layout and the profile/content columns stack.
 - At `480px` and below, outer and section spacing is reduced and resource-action groups become full-width flex rows that wrap.
-- Below Bulma's widescreen breakpoint (`1215px` and below), `.paper-abstract` offsets the publication list's `2em` left indent so abstract boxes have equal left/right margins on tablets in portrait and landscape. At `480px` and below, the offset is `1.15em` to match the mobile list indent. Keep these offsets synchronized with the list indentation; internal box padding is already symmetric.
+- Publication and talk lists have no indentation at any width. Abstract boxes therefore have equal left/right margins on phones, tablets, and laptops, with symmetric internal padding.
 - Long titles and list items use `overflow-wrap: anywhere` as a last-resort safeguard.
 - The page, navbar, shell, and main columns are constrained to the viewport width.
 - Horizontal overflow is clipped after the content has been given normal wrapping opportunities.

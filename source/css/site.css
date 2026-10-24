@@ -283,15 +283,62 @@ a:not(.button):focus-visible {
 }
 
 .publication-note {
-    margin-bottom: 1.4rem;
+    margin-bottom: 1rem;
 }
 
-.publication-list > li + li {
-    margin-top: 0.75rem;
+.content ul.publication-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.publication-list > li > p {
-    margin-bottom: 0;
+.publication-list > .publication-item {
+    margin: 0;
+    padding-block: 0.8rem;
+    border-bottom: 1px solid var(--site-panel-border);
+}
+
+.publication-item:first-child {
+    padding-top: 0;
+}
+
+.content .publication-list + h3 {
+    margin-top: 1.4rem;
+}
+
+.content .publication-title {
+    margin: 0 0 0.2rem;
+    color: var(--bulma-text-strong);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.content .publication-item > .publication-authors {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.publication-authors .publication-owner {
+    color: inherit;
+    font-weight: inherit;
+    font-style: italic;
+}
+
+.content .publication-item > .publication-venue {
+    margin: 0.15rem 0 0;
+    color: var(--bulma-text-strong);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.publication-actions.buttons {
+    display: flex;
+    margin: 0.45rem 0 0;
+}
+
+.publication-actions.buttons .button {
+    margin: 0;
 }
 
 .paper-abstract {
@@ -395,13 +442,54 @@ a:not(.button):focus-visible {
     color: #c4302b;
 }
 
-.talk-title {
-    margin-top: 1.5rem !important;
-    margin-bottom: 0.65rem !important;
+.talk-group + .talk-group {
+    margin-top: 1.35rem;
+}
+
+.talk-group .talk-title {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
     color: var(--bulma-text-strong);
     font-size: 1.05rem;
     font-weight: 700;
     line-height: 1.45;
+}
+
+.talk-resources.buttons {
+    margin-bottom: 0.25rem;
+}
+
+.content ul.talk-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.talk-list > .talk-row {
+    align-items: flex-start;
+    gap: 0.15rem 1rem;
+    margin: 0;
+    padding-block: 0.45rem;
+    border-bottom: 1px solid var(--site-panel-border);
+}
+
+.talk-event.level-left {
+    display: block;
+    flex-shrink: 1;
+    min-width: 0;
+    line-height: 1.5;
+}
+
+.talk-event .button {
+    margin-left: 0.35rem;
+}
+
+.talk-date.level-right {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    font-variant-numeric: tabular-nums;
 }
 
 .site-footer {
@@ -419,13 +507,6 @@ a:not(.button):focus-visible {
     margin: 0;
     padding: 0;
     background-color: transparent;
-}
-
-/* Include tablets in portrait and landscape, below Bulma's widescreen breakpoint. */
-@media screen and (max-width: 1215px) {
-    .publication-list .paper-abstract {
-        margin-left: -2em;
-    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -478,14 +559,8 @@ a:not(.button):focus-visible {
         overflow-wrap: anywhere;
     }
 
-    .publication-list,
     .content ul {
         margin-left: 1.15em;
-    }
-
-    /* Offset the list indent so abstracts have equal space on both sides. */
-    .publication-list .paper-abstract {
-        margin-left: -1.15em;
     }
 
     .resource-actions {
